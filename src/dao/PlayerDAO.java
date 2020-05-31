@@ -14,7 +14,7 @@ public class PlayerDAO
 {
 	public List<Player> getAllPlayers() throws SQLException, Exception
 	{
-		 String sql = "SELECT * FROM PLAYER1 INNER JOIN SKILL1 ON PLAYER1.SKILL_ID = SKILLS.ID ";
+		 String sql = "SELECT * FROM PLAYER1 INNER JOIN SKILLS ON PLAYER1.SKILLS_ID = SKILLS.ID ";
 		 Skill skill = null;
 		 PreparedStatement stmt = ConnectionManager.getConnection().prepareStatement(sql);
 		 ResultSet rs = stmt.executeQuery();
